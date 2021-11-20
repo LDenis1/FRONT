@@ -8,16 +8,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ADDComponent } from './add/add.component';
-import { TableComponent } from './table/table.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-
+import { MedicosComponent } from './medicos/medicos.component';
+import { PacienteComponent } from './paciente/paciente.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { LaboratorioComponent } from './laboratorio/laboratorio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ADDComponent,
-    TableComponent,
-    SidenavComponent
+    SidenavComponent,
+    MedicosComponent,
+    PacienteComponent,
+    LaboratorioComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,10 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatExpansionModule,
+   
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,48 @@
-<app-sidenav></app-sidenav>
+<div class="topnav">
+    <a class="active" routerLink="add">Consulta</a>
+    <a routerLink="medicos">Medicos</a>
+    <a routerLink="paciente">Pacientes</a>
+    <a routerLink="laboratorio">Laboratorio</a>
+    <a href="#about">About</a>
+  </div>
+
+<div class="content">
+    <router-outlet></router-outlet>
+</div>    
+
+
+<div class="footer-clean">
+  <footer>
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-sm-4 col-md-3 item">
+                  <h3>Integrantes</h3>
+                  <ul>
+                      <li><a href="#">Denis Harod Lima Enamorado</a></li>
+                      <li><a href="#">Arlett Alexandra Castellanos Chán</a></li>
+                      <li><a href="#">Guillermo de Jesús Segura Terre</a></li>
+                  </ul>
+              </div>
+              <div class="col-sm-4 col-md-3 item">
+                  <h3>ID's</h3>
+                  <ul>
+                      <li><a href="#">000101773</a></li>
+                      <li><a href="#">000101795</a></li>
+                      <li><a href="#">000101774</a></li>
+                  </ul>
+              </div>
+              <div class="col-sm-4 col-md-3 item">
+                  <h3>Sede</h3>
+                  <ul>
+                      <li><a href="#">Santa Elena</a></li>
+                      <li><a href="#">Santa Elena</a></li>
+                      <li><a href="#">Santa Elena</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                  <p class="copyright">Hospital Los Ángeles © 2021</p>
+              </div>
+          </div>
+      </div>
+  </footer>
+</div>	

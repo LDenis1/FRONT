@@ -1,0 +1,81 @@
+<div class="formularioRegistro">
+    <h2>Agregar Paciente</h2>
+    <form [formGroup]="pacienteForm" (ngSubmit)="guardar()">
+      <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" formControlName="nombre" class="form-control" placeholder="Ingresa tu nombre">
+      </div>
+      <div class="form-group">
+        <label>Apellido</label>
+        <input type="text" formControlName="apellido" class="form-control" placeholder="Ingresa tu apellido">
+      </div>
+      <div class="form-group">
+        <label>Correo</label>
+        <input type="email" formControlName="correo" class="form-control" placeholder="Ingresa tu correo">
+      </div>
+      <div class="form-group">
+        <label>Edad</label>
+        <input type="number" formControlName="edad" class="form-control" placeholder="Ingresa tu edad">
+      </div>
+      <div class="form-group">
+        <label>Examen realizado</label>
+        <select formControlName="examen" class="Select" >
+          <option value="null">ninguno</option>
+          <option value="Analisis de heces">Analisis de heces</option>
+          <option value="Analisis de orina">Analisis de orina</option>
+          <option value="Analisis de sangre">Analisis de sangre</option>
+          <option value="Muestreo Venenoso">Muestreo Venenoso</option>
+          </select>
+      </div>
+
+      <div class="form-group">
+        <label>Estado</label>
+        <select formControlName="estado" class="Select" >
+          <option value="Ninguno">ninguno</option>
+          <option value="En proceso">En proceso</option>
+          <option value="Finalizado">Finalizado</option>
+          </select>
+          
+      </div>
+      
+      <button type="submit" class="btn btn-primary" [disabled]="pacienteForm.invalid">Guardar</button>
+  
+    </form>
+  </div>
+
+
+
+  <div class="formularioMostrar">
+    <h2>Pacientes registrados</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+            <th>Edad</th>
+            <th>Examen</th>
+            <th>Estado</th>
+            
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of pacientes">
+            <th>{{item.id}}</th>
+            <td>{{item.nombre}}</td>
+            <td>{{item.apellido}}</td>
+            <td>{{item.correo}}</td>
+            <td>{{item.edad}}</td>
+            <td>{{item.examen}}</td>
+            <td>{{item.estado}}</td>
+            
+            <td>
+              <button type="button" class="btn btn-success" (click)="editar(item)">Editar</button>
+              <button type="button" class="btn btn-danger" (click)="eliminar(item)">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
