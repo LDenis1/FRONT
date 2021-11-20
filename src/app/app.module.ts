@@ -8,7 +8,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ADDComponent } from './add/add.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
 import { MedicosComponent } from './medicos/medicos.component';
 import { PacienteComponent } from './paciente/paciente.component';
 import {MatExpansionModule} from '@angular/material/expansion';
@@ -18,7 +17,6 @@ import { LaboratorioComponent } from './laboratorio/laboratorio.component';
   declarations: [
     AppComponent,
     ADDComponent,
-    SidenavComponent,
     MedicosComponent,
     PacienteComponent,
     LaboratorioComponent,
